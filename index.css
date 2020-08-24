@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #3AAFA9;
+}
+
+.container {
+  max-width: 600px;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.game-start {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hole {
+  overflow: hidden;
+  align-items: flex-end;
+  position: relative;
+}
+
+.hole:after {
+  background: url(img/dirt.svg);
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+    background: url(img/mole.svg) bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s linear;
+}
+
+.up {
+    top: 0;
+}
